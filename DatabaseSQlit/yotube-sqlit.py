@@ -52,7 +52,9 @@ def main():
 
         else:
             print("Invalid Choice")
-       
+
+
+    conn.close()   
 
 
 
