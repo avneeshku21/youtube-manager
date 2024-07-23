@@ -10,16 +10,24 @@ CREATE TABLE IF NOT EXISTS videos (
  ''')
 
 def list_videos():
-    pass
+    cursor.execute("SELECT * FROM videos")
+    for row in cursor.fetchall():
+        print(row)
 
-def add_videos():
-    pass
+def add_videos(name,time):
+    cursor.execute("INSERT INTO videos(name,time) VALUES(?,?)",(name,time))
+    cursor.commit()
 
-def update_videos():
-    pass
 
-def delete_videos():
-    pass
+def update_videos(video_id ,new_name ,new_time):
+    cursor.execute("UPDATE videosn SET name=?, time=? WHERE id=?",(new_name,new_time,video_id))
+    cursor.commit()
+
+
+def delete_videos(video_id):
+    cursor.execute("DELETE FROM videos  where id=?",(video_id,)) # tuple accept ho rha hai yaha
+    cursor.commit()
+
 
 def main():
     while True:
