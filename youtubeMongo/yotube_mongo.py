@@ -3,7 +3,7 @@
 from pymongo import MongoClient
 from bson import ObjectId
 
-client=MongoClient("mongodb+srv://youtubepy:<youtubepy>@atlascluster.dopnweg.mongodb.net/", tlsAllowInvalidCertificates=True)
+client=MongoClient("mongodb+srv://youtubepy:youtubepy@atlascluster.dopnweg.mongodb.net/", tlsAllowInvalidCertificates=True)
 
 #not good practice
 
