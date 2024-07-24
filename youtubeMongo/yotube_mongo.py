@@ -25,8 +25,6 @@ def update_video(video_id, new_name, new_time):
 
 def delete_video(video_id):
     video_collection.delete_one({"_id": video_id})
-    # TODO: debug this video_id problem
-
 
 def main():
     while True:
